@@ -1,0 +1,63 @@
+/*
+ * 网站 header footer 通用样式
+ */
+
+/******* 桌面样式    BEGIN *******/
+
+@media only screen and (min-width: 840px) {
+	body {
+		padding-top: 80px;
+		padding-right: 0 !important;
+	}
+	.modal-open{
+		overflow: auto !important;
+		
+	}
+	.navbar-default {
+		background-color: #FFFFFF;
+		/*background: url(../img/ar_logo.jpg) no-repeat center;
+		padding-left: 20px;
+		padding-right: 50px;*/
+	}
+	.navbar-default .navbar-nav>li>a {
+		color: #000000;
+		font-size: 1.2em;
+		/*font-weight: bold;*/
+	}
+	.navbar-default .navbar-nav>.active>a,
+	.navbar-default .navbar-nav>.active>a:focus,
+	.navbar-default .navbar-nav>.active>a:hover {
+		color: #C12E2A;
+		background-color: transparent;
+	}
+	.container-fluid,
+	.navbar-nav {
+		height: 80px;
+	}
+	.navbar-nav>li {
+		padding-top: 15px;
+	}
+}
+
+
+/******* 桌面样式    END *******/
+
+
+/*footer*/
+
+.footer {
+	background-color: #313131;
+	color: #FFFFFF;
+	font-weight: bold;
+	margin-top: 20px;
+	padding: 20px 0 20px 0;
+}
+
+.footer ul li {
+	padding: 8px 0;
+	list-style: none;
+}
+
+.footer ul li a {
+	color: #FFFFFF;
+}

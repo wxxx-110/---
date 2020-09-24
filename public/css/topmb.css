@@ -1,0 +1,62 @@
+@charset "utf-8";
+/* 清除 css reset */
+body,p,a,ul,li{margin:0;padding:0;}
+ul,li,h1,h2,h3,h4,h5,h6, dl, dt, dd { margin: 0px;
+    padding: 0px;
+    border: none;
+    list-style: none;}
+		input {
+		    border: none;
+		}
+b,strong{font-weight:normal;}
+i,em{font-style:normal;}
+h1,h2,h3,h4,h5,h6{text-decoration:none;}
+/* 头部 */
+/* .top{
+} */
+.top{
+	border-bottom:1px #e7e7e7 solid ;
+}
+.container{
+	background-color: #FFFFFF;
+}
+.logo{
+	margin-top: 10px;
+}
+.top_title{
+	/* border: 2px solid salmon; */
+	display: flex;
+	padding-left: 20px;
+	line-height: 70px;
+	box-sizing: border-box;
+}
+.top_title>li{
+	width: 68.25px;
+	/* border: 2px solid yellow; */
+	font-size: 1.2em;
+}
+.top_title a{
+		color: #000000;
+}
+.top_title a:hover{
+		opacity: 0.75;
+		color: red;
+		text-decoration: none;
+}
+	.top_gdin{position: relative;
+		/* background-color: #005CBF; */
+		}
+		/*写好的下拉框写点击改变display为fiexbox */
+	.top_gd{
+		position: absolute;
+		top:50px;
+		z-index: 3;
+		display: none;
+	}
+	.top_gd li{
+		width: 50px;
+		height: 30px;
+		text-align: center;
+		line-height: 30px;
+		background-color: aqua;
+	}

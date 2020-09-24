@@ -1,0 +1,90 @@
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<title>Document</title>
+		<meta name="viewport" content="width=device-width,initial-scale=1">
+		<link rel="stylesheet" href="css/bootstrap.css">
+		<link rel="stylesheet" href="css/login.css">
+		<script src="js/jquery.min.js"></script>
+		<script src="js/popper.min.js"></script>
+		<script src="js/bootstrap.min.js"></script>
+	</head>
+	<body style="background-color: #383838;">
+		<div class="container">
+			<div class="login_wz h1">ARCHINA</div>
+			<div class="login">
+				<!-- 登陆模块下的样式 -->
+				<ul id="login_dlmk">
+					<li >
+						<div href="" class="dl_dlmkan">登陆</div>
+						<a  class="dl_zcmkan" onclick="zcshow()">注册</a>
+					</li>	
+					<li><img src="images/ajax-loader.gif" >
+						<input type="text" placeholder="请输入您的用户名" class="qsrndyhm" id="uname"></li>
+					<li><img src="images/ajax-loader.gif" >
+						<input type="text" placeholder="请输入您的密码" class="qsrndmm" id="upwd"></li>
+					<li><img src="images/ajax-loader.gif" >
+						<input type="text" placeholder="请输入您的邀请码" class="qsrndyqm" id="uyqm"></li>
+					<li><button class="login_dl" onclick="login()">登陆</button></li>
+				</ul>
+				<!-- 注册模块下的样式 -->
+				<ul id="login_zcmk">
+					<li >
+						<a class="zc_dlmkan "onclick="dlshow()">登陆</a>
+						<p class="zc_zcmkan">注册</p>
+					</li>	
+					<li><img src="./images/ajax-loader.gif" >
+						<input type="text" placeholder="请输入您的用户名" class="qsrndyhm"></li>
+					<li><img src="./images/ajax-loader.gif" >
+						<input type="text" placeholder="请输入您的密码" class="qsrndmm"></li>
+					<li><img src="./images/ajax-loader.gif" >
+						<input type="text" placeholder="请输入您的邀请码" class="qsrndyqm"></li>
+					<li><button class="login_dl">注册</button></li>
+				</ul>
+			</div>
+		</div>
+		<script type="text/javascript">
+			//切换
+			var dl=document.getElementById('login_dlmk');
+			var zc=document.getElementById('login_zcmk');		
+			function zcshow(){
+				dl.style.display="none";
+				zc.style.display="block";
+			}
+			function dlshow(){
+				zc.style.display="none";
+				dl.style.display="block";
+			}
+			// 登陆模块
+			function login(){
+				var _uname=uname.value;
+				var _upwd=upwd.value;
+				var _uyqm=uyqm.value;
+				if(!_uname){
+					alert('请输入用户名');
+					return;
+				}
+				if(!_upwd){
+					alert('请输入密码');return;
+				}
+				if(!_uyqm){
+					alert('请输入邀请码');return;
+				}
+				var xhr=new XMLHttpRequest();
+				xhr.onreadystatechange=function(){
+					if(xhr.readyState==4 && xhr.status==200){
+						var r=xhr.responseText;
+						console.log(r);
+						if(r==0){
+							alert("登陆失败");
+						}else{
+								location.href="admin.html";
+						}
+					}
+				}
+				xhr.open("get","http://127.0.0.1:8080/user/v1/login/"+_uname+"&"+_upwd+"&"+_uyqm,true);
+				xhr.send();
+			}
+		</script>
+	</body>
+</html>

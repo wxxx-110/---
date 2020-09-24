@@ -1,0 +1,331 @@
+@charset "utf-8";
+
+/* 清除 css reset */
+body,
+p,
+a,
+ul,
+li {
+	margin: 0;
+	padding: 0;
+}
+
+ul,
+li,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+dl,
+dt,
+dd {
+	margin: 0px;
+	padding: 0px;
+	border: none;
+	list-style: none;
+}
+
+input {
+	border: none;
+}
+
+b,
+strong {
+	font-weight: normal;
+}
+
+i,
+em {
+	font-style: normal;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	text-decoration: none;
+}
+
+img {
+	vertical-align: middle;
+	border: 0;
+}
+
+/* 头部 */
+/* .top{
+	
+} */
+.top {
+	border-bottom: 1px #e7e7e7 solid;
+}
+
+.container {
+	background-color: #FFFFFF;
+}
+
+.logo {
+	margin-top: 10px;
+}
+
+.logo:hover {
+	cursor: wait;
+}
+
+.top_title {
+	/* border: 2px solid salmon; */
+	display: flex;
+	padding-left: 20px;
+	line-height: 70px;
+	box-sizing: border-box;
+}
+
+.top_title>li {
+	width: 68.25px;
+	/* border: 2px solid yellow; */
+	font-size: 1.2em;
+}
+
+.top_title a {
+	color: #000000;
+}
+
+.top_title a:hover {
+	opacity: 0.75;
+	color: red;
+	text-decoration: none;
+}
+
+#top_lbt {
+	width: 100%;
+}
+
+#top_lbt img {
+	width: 100%;
+	height: auto;
+}
+
+#body_zmjg {
+	width: 100%;
+}
+
+.big_FAMOUS {
+	text-align: center;
+	color: #C6C8CA;
+	background-color: #002752;
+	font-weight: 900;
+	font-size: 30px;
+}
+
+#body_zmjg img {
+	width: 100%;
+	border-radius: 50%;
+	padding: 0px;
+	border: 3px solid;
+	border-color: #EFEFEF;
+	box-sizing: border-box;
+}
+
+#body_zmjg img:hover {
+	border-color: aqua;
+}
+
+#body_works {
+	background-color: #ecf0f3;
+	color: #C6C8CA;
+}
+
+#body_works img {
+	width: 100%;
+}
+
+#big_works {
+	background-color: #002752;
+	text-align: center;
+	font-weight: 900;
+	font-size: 30px;
+}
+
+.works_xtb {
+	background-color: #cccccc;
+	color: #FFFFFF;
+	border-radius: 10px;
+}
+
+.works_xtb:hover {
+	text-decoration: none;
+	color: #000000;
+}
+
+.works_wz {
+	color: #000000;
+}
+
+.works_title {
+	overflow: hidden;
+}
+
+.works_title:hover {
+	color: red;
+}
+
+.top_gdin {
+	position: relative;
+	/* background-color: #005CBF; */
+}
+
+/*写好的下拉框写点击改变display为fiexbox */
+.top_gd {
+	position: absolute;
+	top: 50px;
+	z-index: 3;
+	display: none;
+}
+
+.top_gd li {
+	width: 50px;
+	height: 30px;
+	text-align: center;
+	line-height: 30px;
+	background-color: aqua;
+}
+
+.works_wbnr {
+	overflow: hidden;
+}
+
+#body_works .read {
+	height: 18px;
+	width: 30px;
+}
+
+#zjgd_img {
+	max-height: 150px;
+	overflow: hidden;
+}
+
+#news_kong>div:first-child {
+	font-size: 24px;
+	text-align: center;
+	line-height: 30px;
+	max-height: 90px;
+	overflow: hidden;
+	margin-bottom: 10px;
+}
+
+/* 新闻的文章 */
+#new_wzwzwz {
+	font-size: 14px;
+	line-height: 16px;
+	max-height: 48px;
+	overflow: hidden;
+	margin-bottom: 10px;
+}
+
+#news_kong>div:first-child>a {
+	color: #333333;
+}
+
+.zxzxtp img {
+	width: 100%;
+}
+
+.news_time {
+	font-size: 14px;
+	color: #ccc;
+}
+/*  */
+.xtball {
+	margin-top: 5px;
+}
+
+.xax {
+	width: 18px;
+	height: 16px;
+	margin-top: 3px;
+}
+
+.nzsygsb {
+	width: 272px;
+	height: 500px;
+	overflow: hidden;
+	position: absolute;
+	right: 0;
+	top: 0;
+}
+
+.nzsygsb_jrtj {
+	font-size: 12px;
+}
+
+.zouzixbg {
+	width: 269.25px;
+	height: 70px;
+	background-color: #EEEEEE;
+	margin-top: 65px;
+	padding-left: 5px;
+}
+
+.zouzixbg>img {
+	height: 60px;
+	margin-top: 5px;
+	float: left;
+	margin-right: 10px;
+}
+
+.zouzixbg div {
+	color: #BBBBBB;
+	font-size: 14px;
+	margin-top: 10px;
+}
+
+.zouzixbg+.zouzixbg {
+	margin-top: 15px;
+}
+
+.hd_img {
+	margin-right: 10px;
+	margin-bottom: 10px;
+}
+.hd_a_img{width: 100%;height: 70px; animation:sxgy 1s infinite;}
+/* background-size: cover; 跟随盒子的大小自适应 */
+@keyframes sxgy{
+	0%{background: url(../images/bic2020.gif) no-repeat;}
+	50%{background: url(../images/2020nanjing.jpg) no-repeat;background-size: cover;}
+	100%{background: url(../images/bic2020.gif) no-repeat;}
+}
+/* 尾部 */
+	.hycdan:hover{
+		opacity: 0.5 ;
+		transition: all 1.2s;
+	}
+	#bottom_all{
+		display: flex;
+		flex-wrap: wrap;
+		color: #fff;
+		background-color: #333;
+	}
+	.b_all_mk1{
+		width: 20%;
+		display: flex; 
+		flex-wrap: wrap;
+	}
+	.mydmk4{
+		width:36% ;
+	}
+	.b_all_mk1 a{
+		width: 100%;
+	}
+	.bottom_all_ewm{
+		margin: 0 auto;
+	}
+	.bottom_all_ewm img:nth-child(3){
+		width: 31px;
+	}
+		#bottom_all a{
+			color: #fff;
+			text-decoration: none;
+		}
