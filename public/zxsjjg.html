@@ -16,9 +16,9 @@
 				<div class="col-xl-4 col-lg-5 col-md-5" class="top_logo"><a href=""><img src="images/com_logo.jpg" class="logo"></a></div>
 				<div class="col-xl-5 col-lg-7 col-md-7 top_title">
 					<li><a href="http://127.0.0.1:8080/index.html">首页</a></li>
-					<li><a href="">头条</a></li>
-					<li><a href="">案例</a></li>
-					<li><a href="">机构</a></li>
+					<li><a href="http://127.0.0.1:8080/news.html">头条</a></li>
+					<li><a href="http://127.0.0.1:8080/zxal.html">案例</a></li>
+					<li><a href="http://127.0.0.1:8080/zxsjjg.html">机构</a></li>
 					<li><a href="">地产</a></li>
 					<li><a href="">搜索</a></li>
 					<li> <a href="" class="dropdown-toggle top_gdin">更多</a>
@@ -51,8 +51,6 @@
 			<div id="body1">
 			
 		</div>
-
-		<button class="hycdan" onclick="show()">这里没有相关的信息</button>
 		<div id="bottom_all">	
 			<div class="b_all_mk1">
 				<a href="">关于我们</a>
@@ -93,15 +91,6 @@
 			</div>
 		</div>
 		<script type="text/javascript">
-			var getbottom_all=document.getElementById('bottom_all');
-			function show(){
-				if(getbottom_all.style.display=="none"){
-						getbottom_all.style.display='flex';
-				}else{
-					getbottom_all.style.display='none';
-				}
-				
-			}
 			// 后台数据
 			const URL='http://127.0.0.1:8080/user/getjgall';
 			const count=20;//每次加载多少条数据
@@ -128,19 +117,17 @@
 					if(xhr.readyState==4&&xhr.status==200){
 						var r=xhr.responseText;
 						arr=JSON.parse(r);
+						var str="";
 						for(var i=0;i<arr.length;i++){
-							var str=`
-							<a href=""  >
-							`;
-							str+=`
+							str+=`<a href=""  >
 							<img src="${arr[i].jimg}" class="zmjg_img">
 							${arr[i].jtbms}	
 							</a>
 							`;
-							odiv.innerHTML+=str;
-							//添加到body1中
-							body1.appendChild(odiv);
 						}	
+						odiv.innerHTML+=str;
+						//添加到body1中
+						body1.appendChild(odiv);
 					}
 				}
 				xhr.open("GET","http://127.0.0.1:8080/user/v1/getjgall",true);

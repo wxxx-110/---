@@ -35,6 +35,10 @@ h1,h2,h3,h4,h5,h6{text-decoration:none;}
 	/* border: 2px solid yellow; */
 	font-size: 1.2em;
 }
+/* 在哪页哪页变红色 */
+.top_title>li:nth-child(4) a{
+	color: #C82333;
+}
 .top_title a{
 		color: #000000;
 }

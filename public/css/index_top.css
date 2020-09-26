@@ -88,7 +88,10 @@ img {
 	/* border: 2px solid yellow; */
 	font-size: 1.2em;
 }
-
+/* 在哪页哪页变红色 */
+.top_title>li:nth-child(1) a{
+	color: #C82333;
+}
 .top_title a {
 	color: #000000;
 }
@@ -148,30 +151,36 @@ img {
 	font-weight: 900;
 	font-size: 30px;
 }
-
+/* 最新例案 */
+.zxalal{
+	background-color: #FFF;
+}
 .works_xtb {
 	background-color: #cccccc;
-	color: #FFFFFF;
-	border-radius: 10px;
+	color: #FFFFFF!important;
+	border-radius: 6px;
+	font-size: 12px;
 }
-
+.works_xtb+.works_xtb{
+	margin-left: 5px;	
+}
 .works_xtb:hover {
 	text-decoration: none;
-	color: #000000;
+	color: #000000!important;
 }
-
-.works_wz {
-	color: #000000;
+.altime{
+	font-size: 12px;
 }
-
-.works_title {
-	overflow: hidden;
+.works_bootm img{
+	width: 24px!important;
+	height: 20px;
 }
-
-.works_title:hover {
-	color: red;
+.works_gkcs{
+	margin-left: 4px;
+	font-size: 14px;
+	line-height: 20px;
 }
-
+/* 更多的下拉框 */
 .top_gdin {
 	position: relative;
 	/* background-color: #005CBF; */
@@ -191,20 +200,6 @@ img {
 	text-align: center;
 	line-height: 30px;
 	background-color: aqua;
-}
-
-.works_wbnr {
-	overflow: hidden;
-}
-
-#body_works .read {
-	height: 18px;
-	width: 30px;
-}
-
-#zjgd_img {
-	max-height: 150px;
-	overflow: hidden;
 }
 
 #news_kong>div:first-child {
@@ -248,6 +243,7 @@ img {
 	margin-top: 3px;
 }
 
+/* 广告 */
 .nzsygsb {
 	width: 272px;
 	height: 500px;

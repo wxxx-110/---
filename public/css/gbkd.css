@@ -7,14 +7,16 @@ a:hover{
 	.top_dgz2{width: 190px;margin-top: 10px;}
 	#body_zmjg{margin-top: 0;}
 	.works_title{
-		font-size: 32px;
-		max-height: 144px;
-		line-height: 36px;
+		font-size: 24px;
+		max-height: 140px;
+		line-height: 28px;
+		overflow: hidden;
 	}
 	.works_wbnr{
-		font-size: 14px;
-		max-height: 64px;
-		line-height: 16px;
+		font-size: 12px;
+		max-height: 72px;
+		line-height: 12px;
+		overflow: hidden;
 		color: #999999;
 		border-bottom: 1px solid #aaaaaa;
 	}
@@ -30,7 +32,6 @@ a:hover{
 	border-radius: 15px;
 	box-sizing: border-box;
 	}
-	#bottom_all{display: none;}
 	.jjjj{width: 18%;}
 	.jgimg a{width: 24%;}
 	.top_ssk{
@@ -58,9 +59,16 @@ a:hover{
 	a:hover{text-decoration: none;	}
 	.works_title a{
 		color: #333333;
+		overflow: hidden;
 	}
 	.works_title a:hover{
 		color: #DC3545;
+	}
+	.works_wbnr{
+		font-size: 14px;
+		max-height: 64px;
+		line-height: 16px;
+
 	}
 	.works_zjgd{color: #333333;}
 	.hd_img{width: 22%;}

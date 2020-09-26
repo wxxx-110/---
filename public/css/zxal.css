@@ -36,7 +36,7 @@ h1,h2,h3,h4,h5,h6{text-decoration:none;}
 	font-size: 1.2em;
 }
 /* 在哪页哪页变红色 */
-.top_title>li:nth-child(2) a{
+.top_title>li:nth-child(3) a{
 	color: #C82333;
 }
 .top_title a{
@@ -64,8 +64,41 @@ h1,h2,h3,h4,h5,h6{text-decoration:none;}
 		line-height: 30px;
 		background-color: aqua;
 	}
+	/* 最新例案 */
+	.zxal_flmk{
+		height: 80px;
+		line-height: 80px;
+		background-color: #ccc;
+	}
+	.works_xtb {
+		background-color: #cccccc;
+		color: #FFFFFF!important;
+		border-radius: 6px;
+		font-size: 12px;
+	}
+	.works_xtb+.works_xtb{
+		margin-left: 5px;	
+	}
+	.works_xtb:hover {
+		text-decoration: none;
+		color: #000000!important;
+	}
+	.altime{
+		font-size: 12px;
+	}
+	.works_bootm img{
+		width: 24px!important;
+		height: 20px;
+	}
+	.worksall_img{
+		width: 100%;
+	}
+	.works_gkcs{
+		margin-left: 4px;
+		font-size: 14px;
+		line-height: 20px;
+	}
 	/* 尾部 */
-	
 		.hycdan:hover{
 			opacity: 0.5 ;
 			transition: all 1.2s;
@@ -136,95 +169,3 @@ h1,h2,h3,h4,h5,h6{text-decoration:none;}
 				border-top-right-radius: 6px;
 				border-bottom-right-radius: 6px;
 			}
-			/* 头条分类 */
-			.ttiaofl{
-				width: 100%;
-				/* background-color: #00A6E4; */
-				display: flex;
-				justify-content: space-around;
-				margin-bottom: 0;
-				border-bottom:1px solid #CCCCCC;
-			}
-			.ttiaofl ul{
-				width: 16%;
-			}
-			/* 文章样式 */
-			#news_kong>div:first-child {
-				font-size: 24px;
-				text-align: center;
-				line-height: 30px;
-				max-height: 90px;
-				overflow: hidden;
-				margin-bottom: 10px;
-			}
-			
-			/* 新闻的文章 */
-			#new_wzwzwz {
-				font-size: 14px;
-				line-height: 16px;
-				max-height: 48px;
-				overflow: hidden;
-				margin-bottom: 10px;
-			}
-			
-			#news_kong>div:first-child>a {
-				color: #333333;
-			}
-			
-			.zxzxtp img {
-				width: 100%;
-			}
-			
-			.news_time {
-				font-size: 14px;
-				color: #ccc;
-			}
-			/* 左边广告 之前设置高度不够隐藏 */
-			.xtball {
-				margin-top: 5px;
-			}
-			
-			.xax {
-				width: 18px;
-				height: 16px;
-				margin-top: 3px;
-			}
-			
-			.nzsygsb {
-				width: 272px;
-				height: 500px;
-				overflow: hidden;
-				position: absolute;
-				right: 0;
-				top: 0;
-			}
-			
-			.nzsygsb_jrtj {
-				font-size: 12px;
-			}
-			
-			.zouzixbg {
-				width: 269.25px;
-				height: 70px;
-				background-color: #EEEEEE;
-				margin-top: 65px;
-				padding-left: 5px;
-			}
-			
-			.zouzixbg>img {
-				height: 60px;
-				margin-top: 5px;
-				float: left;
-				margin-right: 10px;
-			}
-			
-			.zouzixbg div {
-				color: #BBBBBB;
-				font-size: 14px;
-				margin-top: 10px;
-			}
-			
-			.zouzixbg+.zouzixbg {
-				margin-top: 15px;
-			}
-			/*  */

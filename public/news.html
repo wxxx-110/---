@@ -16,8 +16,8 @@
 				<div class="col-xl-4 col-lg-5 col-md-5" class="top_logo"><a href="http://127.0.0.1:8080/"><img src="images/com_logo.jpg" class="logo"></a></div>
 				<div class="col-xl-5 col-lg-7 col-md-7 top_title">
 					<li><a href="http://127.0.0.1:8080/">首页</a></li>
-					<li><a href="">头条</a></li>
-					<li><a href="">案例</a></li>
+					<li><a href="http://127.0.0.1:8080/news.html">头条</a></li>
+					<li><a href="http://127.0.0.1:8080/zxal.html">案例</a></li>
 					<li><a href="http://127.0.0.1:8080/zxsjjg.html">机构</a></li>
 					<li><a href="">地产</a></li>
 					<li><a href="">搜索</a></li>
@@ -39,7 +39,7 @@
 					</li>
 				</div>
 				<div class="col-xl-1 col-lg-9col-md-8 col-sm-7 top_dgz">
-					<a href="" class="float-right  btn btn-danger mr-1">登录</a></div>
+					<a href="http://127.0.0.1:8080/login.html" class="float-right  btn btn-danger mr-1">登录</a></div>
 				<div class="col-xl-2 col-lg-3 col-md-4 col-sm-5 top_dgz2 pb-2">
 					<a href="" class="btn btn-outline-info">我要投稿</a>
 					<a href="" class="btn btn-outline-success">企业入驻</a>
@@ -62,62 +62,20 @@
 			</ul>
 			<!-- 左侧广告 -->
 					<div class="d-flex flex-wrap no-gutters position-relative ">
-						<div class="nzsygsb d-lg-block">
+						<div class="nzsygsb d-lg-block" id="ggdcs">
 							<div class="d-block flex-wrap xtball">
 								<img src="images/ax.jpg" class="xax float-left">
 								<div class="float-left">推 荐 / Recommend</div>
 								<a href="" class="float-right nzsygsb_jrtj">[加入推荐]</a>
 							</div>
-							<div class="zouzixbg">
-								<img src="images/sppp3.jpg">
-								<a href="">UDG联创</a>
-								<div>热度:52134</div>
-							</div>
-							<div class="zouzixbg">
-								<img src="images/sppp3.jpg">
-								<a href="">UDG联创</a>
-								<div>热度:52134</div>
-							</div>
-							<div class="zouzixbg">
-								<img src="images/sppp3.jpg">
-								<a href="">UDG联创</a>
-								<div>热度:52134</div>
-							</div>
-							<div class="zouzixbg">
-								<img src="images/sppp3.jpg">
-								<a href="">UDG联创</a>
-								<div>热度:52134</div>
-							</div>
-							<div class="zouzixbg">
-								<img src="images/sppp3.jpg">
-								<a href="">UDG联创</a>
-								<div>热度:52134</div>
-							</div>			
 				</div>
 			</div>
-			<div class="row">
+			<div class="row" id="wzwzwzwz">
 				<!-- 文章 -->
-				<div class="col-sm-12 col-lg-8 d-flex flex-nowrap ">
-					<div class="col-3  zxzxtp no-gutters p-0 ">
-						<img src="images/zxzx1.png">
-					</div>
-					<div id="news_kong" class="col-9 no-gutters d-flex flex-nowrap flex-column">
-						<div><a href="">将自然的艺术理念注入场地空间，设计师是这样做的</a></div>
-						<div id="new_wzwzwz">9月12日，保利天悦业主答谢暨产品说明会于温州威斯汀酒店三楼鹿城厅挚情上演，600多位天悦业主齐聚一席。</div>
-						<div class="d-flex flex-wrap">
-							<div class="news_time">2020-09-18</div>
-							<div class="ml-3"> <a href="">国恒设计</a></div>
-							<a href="" class=" works_xtb ml-2">国恒</a>
-							<a href="" class=" works_xtb ml-1">广联达</a>
-							<a href="" class=" works_xtb ml-1">战略合作</a>
-							<div class="ml-2">阅读：703</div>
-						</div>
-					</div>
-				</div>
 				
-				<!--  -->
+				
+				<!--  尾部-->
 		</div>
-		<button class="hycdan" onclick="show()">这里没有相关的信息</button>
 		<div id="bottom_all">	
 			<div class="b_all_mk1">
 				<a href="">关于我们</a>
@@ -159,15 +117,80 @@
 		</div>
 		</div>
 		<script type="text/javascript">
-			var getbottom_all=document.getElementById('bottom_all');
-			function show(){
-				if(getbottom_all.style.display=="none"){
-						getbottom_all.style.display='flex';
-				}else{
-					getbottom_all.style.display='none';
+			function newsshow(){
+				var xhr=new XMLHttpRequest();
+				xhr.onreadystatechange=function(){
+					if(xhr.readyState==4&&xhr.status==200){
+						var r=xhr.responseText;
+						arr=JSON.parse(r);
+						var str="";
+						for (var i=0;i<7;i++){
+							str+=`<div class="col-sm-12 col-lg-8 d-flex flex-nowrap ">
+													<div class="col-3  zxzxtp no-gutters p-0 ">
+														<img src="${arr[i].nimg}">
+													</div>
+													<div id="news_kong" class="col-9 no-gutters d-flex flex-nowrap flex-column">
+														<div><a href="">${arr[i].ntitle}</a></div>
+														<div id="new_wzwzwz">${arr[i].nwznr}</div>
+														<div class="d-flex flex-wrap">
+															<div class="news_time">${arr[i].ntime}</div>
+															<div class="ml-3"> <a href="">${arr[i].ngsmc}</a></div>
+															<a href="" class=" works_xtb ml-2">国恒</a>
+															<a href="" class=" works_xtb ml-1">广联达</a>
+															<a href="" class=" works_xtb ml-1">战略合作</a>
+															<div class="ml-2">${arr[i].nydcs}</div>
+														</div>
+													</div>
+												</div>
+							`
+						}				
+				wzwzwzwz.innerHTML=str;
+					}
 				}
-				
+				xhr.open('get','http://127.0.0.1:8080/user/v1/news',true);
+				xhr.send();
 			}
+			newsshow();
+			function gdggl(){
+				var toph= document.body.scrollTop;//距离页面的高度
+				if(toph>=300){
+					document.getElementsByClassName('nzsygsb')[0].style.position='fixed';
+					document.getElementsByClassName('nzsygsb')[0].style.right='10%';
+				}else{
+					document.getElementsByClassName('nzsygsb')[0].style.position='absolute';
+					document.getElementsByClassName('nzsygsb')[0].style.right='0%';
+				}
+			}
+			window.onscroll=function(){
+				gdggl();
+			}
+			// 机构模块
+			var odiv=document.createElement('div');//创建一个div对象
+			odiv.className='jgimg';
+				function getalljg(){
+					var xhr=new XMLHttpRequest();
+					xhr.onreadystatechange=function(){
+						if(xhr.readyState==4&&xhr.status==200){
+							var r=xhr.responseText;
+							arr=JSON.parse(r);
+							
+							var str2="";
+							for(var i=0;i<5;i++){
+								str2+=`<div class="zouzixbg">
+					<img src="${arr[i].jimg}">
+					<a href="">${arr[i].jtbms}</a>
+				 	<div>${arr[i].jrd}</div>
+				 </div>`;
+							}
+							
+							odiv.innerHTML+=str2;
+							ggdcs.appendChild(odiv);
+						}
+					}
+					xhr.open("GET","http://127.0.0.1:8080/user/v1/getjgall",true);
+					xhr.send();
+				}
+				getalljg();
 		</script>
 	</body>
 </html>

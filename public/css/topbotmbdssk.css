@@ -60,8 +60,8 @@ h1,h2,h3,h4,h5,h6{text-decoration:none;}
 		line-height: 30px;
 		background-color: aqua;
 	}
-	/* 尾部 */
 	
+	/* 尾部 */
 		.hycdan:hover{
 			opacity: 0.5 ;
 			transition: all 1.2s;

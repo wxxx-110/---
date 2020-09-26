@@ -22,11 +22,9 @@ router.get("/v1/login/:uname&:upwd&:uyqm",(req,res)=>{
 	var _uname=req.params.uname;
 	var _upwd=req.params.upwd;
 	var _uyqm=req.params.uyqm;
-	// console.log(_uname);
 	var sql="select * from jzwz_user where uname=? and upwd=? and uyqm=?";
 	pool.query(sql,[_uname,_upwd,_uyqm],(err,result)=>{
 		if(err)throw err;
-		// console.log(result);
 		if(result.length>0){
 			res.send(result);
 		}else{
@@ -34,5 +32,43 @@ router.get("/v1/login/:uname&:upwd&:uyqm",(req,res)=>{
 		}
 	});
 });
+//3.查询所有新闻的模块
+router.get("/v1/news",(req,res)=>{
+	var sql="select * from jzwz_news";
+	pool.query(sql,(err,result)=>{
+		if(err)throw err;
+		if(result.length>0){
+			res.send(result);
+		}else{
+			res.send('0');
+		}
+	});
+});
+//4.查询所有案例的模块
+router.get("/v1/getworksall",(req,res)=>{
+var sql="select * from jzwz_works";	
+pool.query(sql,(err,result)=>{
+	if(err)throw err;
+	if(result.length>0){
+		 res.send(result);
+	}else{
+		res.send('0');
+		}
+	});
+});
+//4.1按建筑分类进行查询案例
+router.get("/v1/getworksfl/:walfl",(req,res)=>{
+var _walfl=req.params.walfl;
+var sql="select * from jzwz_works where walfl=?";	
+pool.query(sql,[_walfl],(err,result)=>{
+	if(err)throw err;
+	if(result.length>0){
+		 res.send(result);
+	}else{
+		res.send('0');
+		}
+	});
+});
+
 //路由器对象导出
 module.exports=router;
